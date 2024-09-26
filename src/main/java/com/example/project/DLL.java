@@ -83,7 +83,7 @@ public class DLL<T> {
     		if(tmp.data == e2)
     			end = tmp;
     		tmp = tmp.next;
-    	} while (tmp.previous.data != e2);
+    	} while (tmp != null);
     	
     	//check if they exist then remove between
     	if(start != null && end != null) {
