@@ -93,13 +93,13 @@ public class DLL<T> {
     	}
     }
     
-//    public void printList() {
-//    	DLLNode <T> tmp = head;
-//    	do {
-//    		System.out.print(tmp.data + " ↔ ");
-//    		tmp = tmp.next;
-//    	} while (tmp != null);
-//    }
+    public void printList() {
+    	DLLNode <T> tmp = head;
+    	do {
+    		System.out.print(tmp.data + " ↔ ");
+    		tmp = tmp.next;
+    	} while (tmp != null);
+    }
 //    
 //    public static void main(String[] args) {
 //    	DLL <Character> list = new DLL<Character>();
