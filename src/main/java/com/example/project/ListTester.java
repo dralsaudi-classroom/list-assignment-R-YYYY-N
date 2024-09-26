@@ -8,17 +8,18 @@ public class ListTester {
         // Example 2.1. Given the list l : A, B, C, D, E, circularShiftLeft(l, 1) results in
         // B, C, D, E, A, circularShiftLeft(l, 2) results in C, D, E, A, B.
     	if(!list.empty() && n > 0) {
+    		list.findFirst();
     		for(int i = 0; i < n; i++) {
     			T temp = list.retrieve();
-    			do {
+    			while(!list.last())
     				list.findNext();
-    			} while (!list.last());
     			list.insert(temp);
     			list.findFirst();
     			list.remove();
     		}
     	}
     }
+    
     public static <T> void reverseCopy(DLL<T> l1, DLL<T> l2)
     {
         throw new UnsupportedOperationException("Not supported yet.");
@@ -29,4 +30,26 @@ public class ListTester {
         // Example 4.1. If l1 : A ↔ B ↔ C ↔ D, then calling reverseCopy(l1, l2) results in
         // l2 : D ↔ C ↔ B ↔ A.
     }
+    
+//    public static <T> void printList(List <T> list) {
+//    	list.findFirst();
+//		while(!list.last()) {
+//			System.out.print(list.retrieve() + ", ");
+//			list.findNext();
+//		}
+//		System.out.println(list.retrieve());
+//    }
+//    
+//    public static void main(String[] args) {
+//    	LinkedList <Character> list = new LinkedList<Character>();
+//    	list.insert('A');
+//    	list.insert('B');
+//    	list.insert('C');
+//    	list.insert('D');
+//    	list.insert('E');
+//    	list.insert('F');
+//    	printList(list);
+//    	circularLeftShift(list, 1);
+//    	printList(list);
+//    }
 }
