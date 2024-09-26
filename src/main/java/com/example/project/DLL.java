@@ -83,7 +83,7 @@ public class DLL<T> {
     		if(tmp.data == e2)
     			end = tmp;
     		tmp = tmp.next;
-    	} while (tmp.data != e2);
+    	} while (tmp.previous.data != e2);
     	
     	//check if they exist then remove between
     	if(start != null && end != null) {
@@ -92,4 +92,27 @@ public class DLL<T> {
     		current = head;
     	}
     }
+    
+//    public void printList() {
+//    	DLLNode <T> tmp = head;
+//    	do {
+//    		System.out.print(tmp.data + " ↔ ");
+//    		tmp = tmp.next;
+//    	} while (tmp != null);
+//    }
+//    
+//    public static void main(String[] args) {
+//    	DLL <Character> list = new DLL<Character>();
+//    	list.insert('A');
+//    	list.insert('B');
+//    	list.insert('C');
+//    	list.insert('D');
+//    	list.insert('E');
+//    	list.insert('F');
+//    	list.printList();
+//    	list.removeBetween('B', 'E');
+//    	System.out.println();
+//    	list.printList();
+//    }
+    
 }
