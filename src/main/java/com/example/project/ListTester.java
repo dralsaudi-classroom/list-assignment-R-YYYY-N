@@ -28,14 +28,16 @@ public class ListTester {
         // DoubleLinkedList<T> l2).
         // Example 4.1. If l1 : A ↔ B ↔ C ↔ D, then calling reverseCopy(l1, l2) results in
         // l2 : D ↔ C ↔ B ↔ A.
-    	while(!l1.last())
-    		l1.findNext();
-    	
-    	while(!l1.first()) {
-    		l2.insert(l1.retrieve());
-    		l1.findPrevious();
+    	if(!l1.empty()) {
+    		while(!l1.last())
+        		l1.findNext();
+        	
+        	while(!l1.first()) {
+        		l2.insert(l1.retrieve());
+        		l1.findPrevious();
+        	}
+        	l2.insert(l1.retrieve());
     	}
-    	l2.insert(l1.retrieve());
     }
     
     public static <T> void printList(List <T> list) {
